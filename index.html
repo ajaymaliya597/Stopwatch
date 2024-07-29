@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer with Background Changer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Responsive Styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            transition: background-image 0.5s ease;
+            background-size: cover;
+            background-position: center;
+            background-image: url('./1.jpg'); /* Default image */
+        }
+
+        .cont {
+            text-align: center;
+        }
+
+        .timer {
+            margin-bottom: 20px;
+        }
+
+        .timer-item {
+            font-size: 1.5rem;
+            margin: 5px;
+        }
+
+        .btn {
+            margin-bottom: 20px;
+        }
+
+        .btn button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .change {
+            margin-top: 20px;
+        }
+
+        .change button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Design for Small Screens */
+        @media (max-width: 600px) {
+            .timer-item {
+                font-size: 1rem;
+            }
+
+            .btn button,
+            .change button {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="timer">
+            <div class="timer-item" id="day">Day: 00</div>
+            <div class="timer-item" id="hour">Hour: 00</div>
+            <div class="timer-item" id="minute">Minute: 00</div>
+            <div class="timer-item" id="second">Second: 00</div>
+            <div class="timer-item" id="m-second">MiliSecond: 00</div>
+        </div>
+        <div class="btn">
+            <button id="start" onclick="start()">Start</button>
+            <button id="stop" onclick="stop()">Stop</button>
+            <button id="reset" onclick="reset()">Reset</button>
+        </div>
+    </div>
+    <div class="change">
+        <button id="change">Change Background</button>
+    </div>
+<script src="./script.js"></script>
+</body>
+</html>

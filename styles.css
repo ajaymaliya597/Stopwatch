@@ -1,0 +1,64 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cutive+Mono&family=Dancing+Script:wght@400..700&display=swap');
+
+/* Basic Reset */
+body, div, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.timer-item{
+    color: aliceblue;
+}
+
+body {
+    font-family: "Cutive Mono", monospace;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(./1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.cont {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(2px);
+        border: 33px solid rgba(314, 327, 388, -0.8);
+    }
+
+.timer {
+    margin-bottom: 20px;
+}
+
+.timer div {
+    margin: 5px 0;
+}
+
+.btn button, .change button {
+    background: rgba(255, 255, 255, 0.2); /* Transparent background for glass effect */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease; /* Added transform for button effect */
+    font-family: "Dancing Script", cursive;
+    font-weight: bolder;
+    font-style: normal;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow for button */
+    backdrop-filter: blur(10px); /* Increased blur for a more glassy effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Softened border for more subtle effect */
+    /* Added a subtle gradient for depth */
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+}
+
+.btn button:hover, .change button:hover {
+    background: rgba(255, 255, 255, 0.3); /* Slightly darker glass effect on hover */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
